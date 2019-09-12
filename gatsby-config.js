@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Westwoods Community Church`,
-    description: `You Belong Here`,
+    title: `Web Title`,
+    description: `Brief Description`,
     author: `Mike Daugherty`,
   },
   plugins: [
@@ -15,6 +15,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,7 +25,7 @@ module.exports = {
         background_color: `#000`,
         theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/ww-favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -49,8 +50,19 @@ module.exports = {
         display: "swap",
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "***Get Tracking Code***",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "",
+      },
+    },
+    `gatsby-plugin-netlify`,
   ],
 }
