@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Web Title`,
-    description: `Brief Description`,
+    title: `Seize the Day`,
+    description: `Best darn cleaning service on the planet!`,
     author: `Mike Daugherty`,
   },
   plugins: [
@@ -19,20 +19,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Westwoods`,
-        short_name: `wcc`,
+        name: `Seize the Day`,
+        short_name: `stdcs`,
         start_url: `/`,
         background_color: `#000`,
         theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/images/ww-favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your wordpress source
-        baseUrl: `your WP File Here`,
+        baseUrl: `seizetheday.msdbackend.com`,
         protocol: `https`,
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: false,
